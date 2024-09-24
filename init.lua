@@ -673,6 +673,7 @@ require('lazy').setup({
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
 
+      local lspkind = require 'lspkind'
       cmp.setup {
         snippet = {
           expand = function(args)
@@ -735,6 +736,10 @@ require('lazy').setup({
         },
         sources = {
           {
+            name = 'copilot',
+            group_index = 0,
+          },
+          {
             name = 'lazydev',
             -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
             group_index = 0,
@@ -742,6 +747,15 @@ require('lazy').setup({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+        },
+        formatting = {
+          fields = { cmp.ItemField.Abbr, cmp.ItemField.Kind, cmp.ItemField.Menu },
+          expandable_indicator = false,
+          format = lspkind.cmp_format {
+            mode = 'symbol',
+            max_width = 50,
+            symbol_map = { Copilot = ' ' },
+          },
         },
       }
     end,
@@ -846,8 +860,11 @@ require('lazy').setup({
   -- require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.barbar',
-  require 'kickstart.plugins.copilot',
+  -- require 'kickstart.plugins.copilot',
   require 'kickstart.plugins.lazygit',
+  require 'kickstart.plugins.copilot_lua',
+  require 'kickstart.plugins.copilot_cmp',
+  require 'kickstart.plugins.lspkind',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
