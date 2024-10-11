@@ -864,6 +864,7 @@ require('lazy').setup({
   require 'kickstart.plugins.lazygit',
   require 'kickstart.plugins.copilot_lua',
   require 'kickstart.plugins.copilot_cmp',
+  require 'kickstart.plugins.copilot_chat',
   require 'kickstart.plugins.lspkind',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
