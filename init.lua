@@ -279,7 +279,7 @@ require('lazy').setup({
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
-      -- it can fuzzy find! It's more than just a "file finder", it can search
+      -- it can fuzzy find! It's more than just a "file finder, it can search
       -- many different aspects of Neovim, your workspace, LSP, and more!
       --
       -- The easiest way to use Telescope, is to start by doing something like:
@@ -866,6 +866,7 @@ require('lazy').setup({
   require 'kickstart.plugins.copilot_cmp',
   require 'kickstart.plugins.copilot_chat',
   require 'kickstart.plugins.lspkind',
+  require 'kickstart.plugins.csharp',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
