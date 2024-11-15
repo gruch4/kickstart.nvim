@@ -13,6 +13,6 @@ return {
     -- require('csharp').run_project()
     -- require('csharp').fix_usings()
   end,
-}
 
--- vim.keymap.set('n', '<leader>csr')
+  vim.keymap.set('n', '<leader>csr', '<cmd>lua require("csharp").run_project()<cr>'),
+}
