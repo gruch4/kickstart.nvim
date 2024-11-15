@@ -33,4 +33,15 @@ return {
       },
     },
   },
+  init = function()
+    vim.api.nvim_create_augroup('neotree', { clear = true })
+    vim.api.nvim_create_autocmd('VimEnter', {
+      desc = 'Open Neotree on startup',
+      group = 'neotree',
+      callback = function()
+        vim.cmd 'set nornu nonu | Neotree toggle'
+        vim.cmd 'wincmd l'
+      end,
+    })
+  end,
 }

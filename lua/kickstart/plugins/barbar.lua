@@ -11,4 +11,6 @@ return {
   opts = {
     animation = true,
   },
+  vim.keymap.set('n', '<A-,>', '<cmd>BufferPrevious<CR>'),
+  vim.keymap.set('n', '<A-.>', '<cmd>BufferNext<CR>'),
 }
