@@ -23,9 +23,9 @@ return {
       },
     },
     filesystem = {
-      -- filtered_items = {
-      --   hide_dotfiles = false,
-      -- },
+      filtered_items = {
+        hide_dotfiles = false,
+      },
       window = {
         mappings = {
           ['\\'] = 'close_window',
@@ -39,7 +39,8 @@ return {
       desc = 'Open Neotree on startup',
       group = 'neotree',
       callback = function()
-        vim.cmd 'set nornu nonu | Neotree toggle'
+        vim.cmd 'Neotree toggle'
+        vim.cmd 'set nornu nonu'
         vim.cmd 'wincmd l'
       end,
     })
