@@ -700,6 +700,7 @@ require('lazy').setup({
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
           ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<C-e>'] = cmp.mapping.abort(),
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
@@ -867,6 +868,7 @@ require('lazy').setup({
   require 'kickstart.plugins.copilot_chat',
   require 'kickstart.plugins.lspkind',
   require 'kickstart.plugins.csharp',
+  require 'kickstart.plugins.noice',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`

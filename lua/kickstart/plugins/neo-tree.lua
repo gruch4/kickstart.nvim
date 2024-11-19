@@ -25,6 +25,16 @@ return {
     filesystem = {
       filtered_items = {
         hide_dotfiles = false,
+        hide_by_name = {
+          '.git',
+          '.github',
+          '.cache',
+          '.vscode',
+          '.idea',
+          '__pycache__',
+          '.mypy_cache',
+          '.pytest_cache',
+        },
       },
       window = {
         mappings = {

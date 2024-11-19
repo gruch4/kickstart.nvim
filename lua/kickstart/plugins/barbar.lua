@@ -13,4 +13,5 @@ return {
   },
   vim.keymap.set('n', '<A-,>', '<cmd>BufferPrevious<CR>'),
   vim.keymap.set('n', '<A-.>', '<cmd>BufferNext<CR>'),
+  vim.keymap.set('n', '<A-c>', '<cmd>BufferClose<CR>'),
 }
