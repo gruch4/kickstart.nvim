@@ -869,6 +869,8 @@ require('lazy').setup({
   require 'kickstart.plugins.lspkind',
   require 'kickstart.plugins.csharp',
   require 'kickstart.plugins.noice',
+  require 'kickstart.plugins.detour',
+  -- require 'kickstart.plugins.iron',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
