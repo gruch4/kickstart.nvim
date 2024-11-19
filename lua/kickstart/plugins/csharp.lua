@@ -1,5 +1,5 @@
 return {
-  'iabdelkareem/csharp.nvim',
+  'gruch4/csharp.nvim',
   version = '*',
   dependencies = {
     'williamboman/mason.nvim',
