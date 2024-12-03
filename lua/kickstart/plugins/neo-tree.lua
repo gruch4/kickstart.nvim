@@ -34,6 +34,7 @@ return {
           '__pycache__',
           '.mypy_cache',
           '.pytest_cache',
+          '.ruff_cache',
         },
       },
       window = {
