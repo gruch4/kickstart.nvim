@@ -2,7 +2,7 @@ return {
   'gruch4/csharp.nvim',
   version = '*',
   dependencies = {
-    'williamboman/mason.nvim',
+    'mason-org/mason.nvim',
     'mfussenegger/nvim-dap',
     'Tastyep/structlog.nvim',
   },
