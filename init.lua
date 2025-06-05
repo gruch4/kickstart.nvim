@@ -525,6 +525,20 @@ require('lazy').setup({
       --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+      vim.lsp.enable 'yamlls'
+      vim.lsp.config('yamlls', {
+        capabilities = capabilities,
+        settings = {
+          yaml = {
+            schemas = {
+              ['https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/prettier.json'] = 'package.json',
+              ['https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/eslint.json'] = 'eslint.config.js',
+              ['https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/stylelint.json'] = 'stylelint.config.js',
+              ['https://raw.githubusercontent.com/yannh/kubernetes-json-schema/refs/heads/master/v1.32.1-standalone-strict/all.json'] = '/*.k8s.yaml',
+            },
+          },
+        },
+      })
       local servers = {
         -- clangd = {},
         -- gopls = {},
